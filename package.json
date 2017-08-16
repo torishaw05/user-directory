@@ -1,0 +1,15 @@
+{
+  "name": "user-directory",
+  "version": "1.0.0",
+  "description": "creating a user directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tori Shaw",
+  "license": "ISC",
+  "dependencies": {
+    "mustache": "^2.3.0",
+    "mustache-express": "^1.2.5"
+  }
+}

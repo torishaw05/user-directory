@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Directory</title>
+    <link rel="stylesheet" href="/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>User Directory</h1>
+      {{#userData}}
+        <div class="userCard">
+          <img src={{avatar}} alt={{username}}/>
+          <h2>{{name}}</h2>
+          {{#job}}
+            <p>{{job}}, {{company}}</p>
+          {{/job}}
+          {{^job}}
+            <p class='hire'>Available for hire</p>
+          {{/job}}
+        </div>
+      {{/userData}}
+    </div>
+  </body>
+</html>
