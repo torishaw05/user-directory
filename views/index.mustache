@@ -7,9 +7,18 @@
     <title></title>
   </head>
   <body>
+
     <header>
       <center>
       <h1> User Directory </h1>
+      <nav>
+
+
+  <!-- <a href='/{{job}}'>Home</a> -->
+      <a href='/looking/{{job}}'>Looking</a>
+      <a href='/employed/{{job}}'>Employed</a>
+      <a href='/{{job}}'>Listing</a>
+  </nav>
       </center>
     </header>
     <div class ="container">
@@ -27,10 +36,11 @@
       </div>
 <div class="job">
   {{#job}}
-  <p>{{job}}</p>
+  <p>{{job}}, {{company}}</p>
   {{/job}}
   </div>
 </div>
 {{/users}}
   </div>
   </body>
+  </html>

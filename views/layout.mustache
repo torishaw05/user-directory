@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./style.css">
+
+  <meta charset="utf-8">
+  <title> Robots </title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+  <nav>
+    <!-- <a href='/{{job}}'>Home</a> -->
+    <a href='/looking/{{job}}'>Looking</a>
+    <a href='/employed/{{job}}'>Employed</a>
+    <a href='/{{job}}'>Listing</a>
+  </nav>
+
+  <div class='container'>
+    {{{yield}}}
+  </div>
+</body>
+</html>

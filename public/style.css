@@ -11,6 +11,7 @@ body {
   flex-wrap: wrap;
   font-family: monospace;
   /*border: 2px solid black;*/
+  padding-top: 30px;
  }
 .robots {
   flex-basis: 20%;
@@ -18,14 +19,30 @@ body {
   border-radius: 9px;
   padding: 5px;
   margin: 15px;
-  background-color: rgb(249, 201, 251);
+  background-color: white;
   color: black;
   font-family: serif;
   display:
   align-items: center;
 }
 .robots:hover {
-  background-color: rgb(212, 73, 115);
+  background-color:rgb(170, 139, 222);
   color: white;
   /*font-size:40px;*/
+}
+nav a {
+  border:  4px solid white;
+  border-radius: 7px;
+  padding: 15px;
+  margin: 10px;
+  font-size: 20px;
+  color: rgb(235, 123, 220);
+  text-decoration: none;
+  background-color: white;
+font-weight: bold;
+
+}
+nav a:hover {
+  background-color: rgb(170, 139, 222);
+  color: white;
 }

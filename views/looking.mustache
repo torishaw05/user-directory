@@ -1,0 +1,27 @@
+<head>
+  <link rel="stylesheet" href="./style.css">
+
+<nav>
+    <!-- <a href='/{{job}}'>Home</a> -->
+  <a href='/looking/{{job}}'>Looking</a>
+  <a href='/employed/{{job}}'>Employed</a>
+  <a href='/{{job}}'>Listing</a>
+</nav>
+</head>
+<body>
+<div class='container'>
+  {{#users}}
+  <div class='robots'>
+    <a href='/looking/{{id}}'>Looking</a>
+    <div class='image'>
+      <img src={{avatar}}>
+    </div>
+    <div class='name'>
+      {{#name}}
+      <p>{{name}}</p>
+      {{/name}}
+    </div>
+  </div>
+  {{/users}}
+</div>
+</body>
