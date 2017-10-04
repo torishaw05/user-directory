@@ -3,15 +3,26 @@
 </head>
 <body>
 <nav>
-    <!-- <a href='/{{job}}'>Home</a> -->
-<a href='/looking/{{job}}'>Looking</a>
-<a href='/employed/{{job}}'>Employed</a>
-<a href='/{{job}}'>Listing</a>
+    <!-- <a href=/>Home</a> -->
+<!-- <a href='/looking/'>Looking</a>
+<a href='/employed'>Employed</a>
+<a href='/{{job}}'>Listing</a> -->
 </nav>
+{{#users}}
 <div class='listingLink' href='/{{id}}'>
   <div class='id'>
-  <p>{{name}}</p>
+  <h3>{{name}}</h3>
   {{job}}
+  <br></br>
+  <img src={{avatar}}>
+  <br></br>
+  <h3>Company: {{company}} </h3>
+  <br></br>
+
+
+
 </div>
+{{/users}}
+
 </div>
 </body>

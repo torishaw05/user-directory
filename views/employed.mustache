@@ -5,17 +5,31 @@
   <link rel='stylesheet' href='./style.css'>
     <title> Robot Search </title>
   </head>
+  <center>
   <body>
     <nav>
         <!-- <a href='/{{job}}'>Home</a> -->
-    <a href='/looking/{{job}}'>Looking</a>
+    <!-- <a href='/looking/{{job}}'>Looking</a>
     <a href='/employed/{{job}}'>Employed</a>
-    <a href='/{{job}}'>Listing</a>
-</nav>
-    <div class='container'>
+    <a href='/{{job}}'>Listing</a> -->
+<!-- </nav> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class='container'>
       {{#users}}
       <div class='robots'>
-        <a href='/employed{{id}}'>employed</a>
+        <a href='/employed/{{id}}'>employed</a>
         <div class='image'>
           <img src={{avatar}}>
         </div>
@@ -28,7 +42,7 @@
           {{#job}}
           <p>{{job}}, {{company}}</p>
           {{/job}}
-        </div>
+        </div> -->
         {{#users}}
 <a class="robot_container" href="/listing/{{id}}">
         <img src={{avatar}}>
@@ -46,4 +60,5 @@
       {{/users}}
     </div>
   </body>
+</center>r
   </html>

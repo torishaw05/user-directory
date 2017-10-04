@@ -43,7 +43,7 @@ router.get('/', getListing, function(req,res){
   res.render('index', {users:data});
 
 });
-router.get('/employed', getListing, function(req,res){
+router.get('/employed', function(req,res){
 let employed= [];
 data.forEach(function(user){
   if(user.job!= null) {
@@ -61,16 +61,63 @@ router.get('/looking', getListing, function(req, res){
   });
   res.render('looking', {users:looking})
 });
-router.get('listing/:id', getListing, function(req,res){
+
+let tempUser;
+
+router.get('/listing/:id', getListing, function(req,res){
+  console.log("listing");
   let id= req.params.id;
-  let userToRender;
-  data.forEach(function(user) {
-    if (user.id ==id){
-      userToRender = user;
-      }
-  });
-  res.render('listing', {users: userToRender });
+  if (id == "style.css") {
+    res.render('listing', {users: tempUser });
+    tempUser = null;
+  } else {
+    let userToRender;
+    data.forEach(function(user) {
+      if (user.id == id){
+          userToRender = user;
+          tempUser = user;
+        }
+    });
+    res.render('listing', {users: userToRender });
+  }
 });
+
+router.get('/employed/:id', getListing, function(req,res){
+  console.log("employed");
+  let id= req.params.id;
+  if (id == "style.css") {
+    res.render('employed', {users: tempUser });
+    tempUser = null;
+  } else {
+    let userToRender;
+    data.forEach(function(user) {
+      if (user.id == id){
+          userToRender = user;
+          tempUser = user;
+        }
+    });
+    res.render('employed', {users: userToRender });
+  }
+});
+
+router.get('/looking/:id', getListing, function(req,res){
+  console.log("looking");
+  let id= req.params.id;
+  if (id == "style.css") {
+    res.render('looking', {users: tempUser });
+    tempUser = null;
+  } else {
+    let userToRender;
+    data.forEach(function(user) {
+      if (user.id == id){
+          userToRender = user;
+          tempUser = user;
+        }
+    });
+    res.render('looking', {users: userToRender });
+  }
+});
+
 module.exports=router;
 
 

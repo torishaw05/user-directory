@@ -2,13 +2,15 @@
   <link rel="stylesheet" href="./style.css">
 
 <nav>
-    <!-- <a href='/{{job}}'>Home</a> -->
-  <a href='/looking/{{job}}'>Looking</a>
+  <a href='/looking{{job}}'>Looking</a>
   <a href='/employed/{{job}}'>Employed</a>
   <a href='/{{job}}'>Listing</a>
 </nav>
 </head>
-<body>
+
+
+
+<!-- <body>
 <div class='container'>
   {{#users}}
   <div class='robots'>
@@ -19,9 +21,35 @@
     <div class='name'>
       {{#name}}
       <p>{{name}}</p>
+      <br></br>
+      {{job}}
+      <br></br>
+{{company}}
       {{/name}}
     </div>
-  </div>
-  {{/users}}
+  </div> -->
+
+<center>
+  {{#users}}
+<a class="robot_container" href="/looking/{{id}}">
+  <img src={{avatar}}>
+  <h3 class="name">{{name}}</h3>
+  {{#job}}
+  <h4>{{name}}</h4>
+
+    <h4>{{job}}</h4>
+    <h4>{{company}}</h4>
+  {{/job}}
+  {{^job}}
+    <h4 class="needsJob">Available for Hire</h4>
+  {{/job}}
+</a>
+{{/users}}
+</div>
+{{/users}}
+</center>
+
+
+
 </div>
 </body>

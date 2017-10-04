@@ -3,26 +3,22 @@
   <head>
 
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./style.css">
+    <link rel='stylesheet' href='./style.css'>
     <title></title>
   </head>
   <body>
 
     <header>
       <center>
-      <h1> User Directory </h1>
-      <nav>
 
 
-  <!-- <a href='/{{job}}'>Home</a> -->
-      <a href='/looking/{{job}}'>Looking</a>
-      <a href='/employed/{{job}}'>Employed</a>
-      <a href='/{{job}}'>Listing</a>
-  </nav>
+
+
       </center>
     </header>
     <div class ="container">
 
+<center>
   {{#users}}
   <div class="robots">
   <a href="/listing/{{id}}">listing</a>
@@ -41,6 +37,7 @@
   </div>
 </div>
 {{/users}}
+</center>
   </div>
   </body>
   </html>
